@@ -1,0 +1,95 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "bubblesort.ipynb",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/as0975058380/algorithm/blob/master/bubblesort.ipynb0930\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "32sgU0StMiof"
+      },
+      "source": [
+        "Bubble sort (氣泡排序)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "esB_4fSeMLYJ",
+        "outputId": "4b37e4a2-8a42-47bc-d875-a15d90a97b6c",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 153
+        }
+      },
+      "source": [
+        "def Bubble_Sort(datas):\n",
+        "    for i in range(1, len(datas)): # \n",
+        "        for j in range(len(datas)-i):   # \n",
+        "            if datas[j] > datas[j+1]:   # \n",
+        "                datas[j], datas[j+1] = datas[j+1], datas[j]\n",
+        "    return datas\n",
+        "\n",
+        "\n",
+        "if __name__ == '__main__':\n",
+        "    import random\n",
+        "    a = list()\n",
+        "    for k in range(1,7):  #使用迴圈分為六次輸入及加入list裡將字串轉為數值在做大小排列。\n",
+        "      b = input(\"輸入第%d數字\"%(k))\n",
+        "     \n",
+        "\n",
+        "      a.append(int(b))\n",
+        "    a = Bubble_Sort(a)\n",
+        "    print(a)\n",
+        "print('今天9/30')\n",
+        "  "
+      ],
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "輸入第1數字2\n",
+            "輸入第2數字7\n",
+            "輸入第3數字9\n",
+            "輸入第4數字7\n",
+            "輸入第5數字6\n",
+            "輸入第6數字8\n",
+            "[2, 6, 7, 7, 8, 9]\n",
+            "今天9/30\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "MOQ_aZKnM-wL"
+      },
+      "source": [
+        "請加入註解，並將程式修改為加入六個數做氣泡排序\n"
+      ]
+    }
+  ]
+}
